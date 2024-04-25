@@ -18,7 +18,11 @@ public class Comparator {
 
 		Class<?> clazz = oldObject.getClass();
 		for(Method method : clazz.getMethods()) {
-			if (method.getName().startsWith("get") && (method.getParameterCount() == 0) && (method.getReturnType() != void.class)) {
+			if (method.getName().startsWith("get") &&
+				(method.getParameterCount() == 0) &&
+				(method.getReturnType() != void.class) &&
+				(!method.isAnnotationPresent(IgnoreInComparison.class))
+			) {
 				try {
 					Object oldValue = method.invoke(oldObject);
 					Object newValue = method.invoke(newObject);

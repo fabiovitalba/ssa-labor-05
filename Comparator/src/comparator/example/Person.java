@@ -1,5 +1,7 @@
 package comparator.example;
 
+import comparator.IgnoreInComparison;
+
 public class Person {
 	private String firstname;
 	private String lastname;
@@ -46,6 +48,7 @@ public class Person {
 		this.age = age;
 	}
 
+	@IgnoreInComparison
 	public double getWeight() {
 		return weight;
 	}
