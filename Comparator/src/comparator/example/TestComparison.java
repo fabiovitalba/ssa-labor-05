@@ -11,7 +11,7 @@ public class TestComparison {
         Person p1 = new Person("Eduardo", "Guerra", 39, 110);
         Person p2 = new Person("Eduardo", "Guerra", 43, 120);
 
-        List<Difference> diffs = Comparator.compare(p1,p2);
+        //List<Difference> diffs = Comparator.compare(p1,p2);
         System.out.println(Comparator.compare(p1,p2));
     }
 }
