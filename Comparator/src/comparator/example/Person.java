@@ -1,6 +1,7 @@
 package comparator.example;
 
 import comparator.IgnoreInComparison;
+import comparator.Tolerance;
 
 public class Person {
 	private String firstname;
@@ -57,6 +58,7 @@ public class Person {
 		this.weight = weight;
 	}
 
+	@Tolerance(minDiff = 0.01)
 	public double getHeight() {
 		return height;
 	}
