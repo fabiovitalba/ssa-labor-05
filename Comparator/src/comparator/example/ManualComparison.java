@@ -21,6 +21,6 @@ public class ManualComparison {
 	//alternative? public static void varArgsMethod(String fixed, int[] varargs) {
 	public static void varArgsMethod(String fixed, int... varargs) {
 		//varargs[2];
-		
+
 	}
 }

@@ -34,4 +34,9 @@ public class Difference {
 	public void setNewValue(Object newValue) {
 		this.newValue = newValue;
 	}
+
+	@Override
+	public String toString() {
+		return attribute + ": " + oldValue.toString() + " != " + newValue.toString();
+	}
 }
