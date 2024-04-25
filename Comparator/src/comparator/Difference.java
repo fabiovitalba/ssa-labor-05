@@ -37,6 +37,6 @@ public class Difference {
 
 	@Override
 	public String toString() {
-		return attribute + ": " + oldValue.toString() + " != " + newValue.toString();
+		return "(" + attribute + ": " + oldValue.toString() + " != " + newValue.toString() + ")";
 	}
 }
