@@ -24,7 +24,8 @@ public class Comparator {
 					Object newValue = method.invoke(newObject);
 
 					if (!oldValue.equals(newValue)) {
-						String attributeName = method.getName().substring(3);
+						//String attributeName = method.getName().substring(3); // Starts with uppercase letter
+						String attributeName = method.getName().substring(3,4).toLowerCase() + method.getName().substring(4);
 						diffs.add(new Difference(attributeName, oldValue, newValue));
 					}
 				} catch (Exception e) {
