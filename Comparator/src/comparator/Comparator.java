@@ -23,8 +23,10 @@ public class Comparator {
 					Object oldValue = method.invoke(oldObject);
 					Object newValue = method.invoke(newObject);
 
-					if (!oldValue.equals(newValue))
-						diffs.add(new Difference(method.getName(),oldValue,newValue));
+					if (!oldValue.equals(newValue)) {
+						String attributeName = method.getName().substring(3);
+						diffs.add(new Difference(attributeName, oldValue, newValue));
+					}
 				} catch (Exception e) {
 					throw new RuntimeException(e);
 				}
